@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.homeBar {
+	height: 33.33333vh;
+	background-position: center center;
+	background-size: cover;
+	border-color: #707070;
+	border-width: 1px;
+	border-style: solid;
+}
+
+.navBar {
+	height: 10.8vh;
+	background-position: center center;
+	background-size: cover;
+	border-color: #707070;
+	border-width: 1px;
+	border-style: solid;
+}
+
+.skull {
+	background-image: url(../img/barSkull@2x.png);
+}
+
+.truck {
+	background-image: url(../img/barTruck@2x.png);
+}
+
+.cut {
+	background-image: url(../img/barCut@2x.png);
+}
+
+.navTruck {
+	background-image: url(../img/navTruck@2x.png);
+}
+
+.navCut {
+	background-image: url(../img/navCut@2x.png);
+}
+
+.navSkull {
+	background-image: url(../img/navSkull@2x.png);
+}
+
+.navTitle {
+	color: white;
+	font-size: 8vw;
+	text-align: center;
+	margin-bottom: 3vh; 
+	margin-top: 3vh;
+}
+
+.title {
+	color: white;
+	font-size: 13.3vw;
+	margin-bottom: 6vh;
+	margin-top: 6vh;
+}
