@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.austinlubetkin.skullythebarber" version="1.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Skully the Barber</name>
+<widget id="com.austinlubetkin.skullythebarber" version="1.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Skully Barber Salon</name>
     <description>
         Skully's Barber Salon is Florida's only mobile barber salon. Founded in 2015 and opened in 2016, Skully's is your one stop for on the go mobile haircuts, color and styling.
     </description>
