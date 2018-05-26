@@ -231,8 +231,8 @@
 		  c=document.getElementById("card");
 		  var title = document.createElement("H2");
 		  var d = Date();
-		  title.innerHTML="You have unlocked one free haircut for use on "+d.toDateString();
-		  localStorage.setItem("phrase","You have unlocked one free haircut for use on "+d.toDateString());
+		  title.innerHTML="You have unlocked one free haircut for use on "+(d.getMonth()+1)+"/"+d.getDate()+"/"+d.getFullYear();
+		  localStorage.setItem("phrase","You have unlocked one free haircut for use on "+(d.getMonth()+1)+"/"+d.getDate()+"/"+d.getFullYear();
 		  c.appendChild("title");
 		 
 	  }
@@ -261,12 +261,12 @@
 				 b.id="redeem";
 			  		
 				 b.innerHTML="You have unlocked a free haircut, tap here to redeem";
-				 //b.className+="btn btn-success";	
-			  b.style.color="#fff";
+				 b.className+="btn btn-success";	
+			  /*b.style.color="#fff";
 			  b.style.backgroundColor="#5cb85c";
 			  b.style.borderColor="#4cae4c";
 			  b.style.padding="6px 12px";
-			   b.style.marginTop="18";
+			   b.style.marginTop="18";*/
 			  //	b.href="#rewards";
 			  //b.dataset.toggle="tab";
 			
