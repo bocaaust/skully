@@ -10,13 +10,16 @@
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="26" />
-    
+    <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="overwrite">
+    <string>We are using the Camera for checking in through our Rewards Program</string>
+</edit-config>
     <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
     
     <plugin name="cordova-plugin-console" source="npm" spec="~1.0.2" />
     
     <plugin name="cordova-plugin-device" source="npm" spec="~1.1.1" />
    <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1" />
+   <plugin name="cordova-plugin-barcodescanner" source="npm" spec="~0.7.4" />
     <plugin name="cordova-plugin-media-capture" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-device-orientation" source="npm" spec="~1.0.2" />
     <plugin name="cordova-plugin-dialogs" source="npm" spec="~1.2.0" />
