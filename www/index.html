@@ -239,7 +239,12 @@
 	  
 	  function redeam(){
 		  localStorage.setItem("count",localStorage.getItem("count")-10);
+		  
 		  remove();
+		   var r = document.getElementById("redemption");
+		  while (r.hasChildNodes()) {
+    		r.removeChild(r.lastChild);
+		  	}
 		  fillCard();
 		  c=document.getElementById("card");
 		  var title = document.createElement("H2");
