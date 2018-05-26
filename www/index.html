@@ -205,14 +205,14 @@
 				 
 			  var space = document.createElement("DIV");
 				 if (i==0){
-					  space.className+="col-xs-2 col-xs-offset-1";
+					  space.className+="col-xs-6";
 				 }else{
-					 space.className+="col-xs-2";
+					 space.className+="col-xs-6";
 				 }
 			  
 				//space.style.width="80";
 			  var star = document.createElement("IMG");
-			  star.width="60";
+			  star.style.width="100%";
 			  star.src="img/starE.png";
 			  space.appendChild(star);
 			  c.appendChild(space);
@@ -236,14 +236,15 @@
 		  if (localStorage.getItem("count")>=10 ){
 			 for (var i = 0; i < 10;i++){
 			  var space = document.createElement("DIV");
-			   if (i==0){
-					 space.className+="col-xs-2 col-xs-offset-1";
+			   if (i%2==0){
+					 space.className+="col-xs-3 col-xs-offset-3";
+				  
 				 }else{
-					 space.className+="col-xs-2";
+					 space.className+="col-xs-3";
 				 }
 				// space.style.width="80";
 			  var star = document.createElement("IMG");
-			  star.width="60";
+			 star.style.width="100%";
 			  star.src="img/star.png";
 			  space.appendChild(star);
 			  c.appendChild(space);
@@ -258,28 +259,29 @@
 		  
 		  for (var i = 0; i < localStorage.getItem("count")%10;i++){
 			  var space = document.createElement("DIV");
-			   if (i==0){
-					  space.className+="col-xs-2 col-xs-offset-1";
+			    if (i%2==0){
+					 space.className+="col-xs-3 col-xs-offset-3";
+				  
 				 }else{
-					 space.className+="col-xs-2";
+					 space.className+="col-xs-3";
 				 }
 			//space.style.width="80";
 			  var star = document.createElement("IMG");
-			  star.width="60";
+			  star.style.width="100%";
 			  star.src="img/star.png";
 			  space.appendChild(star);
 			  c.appendChild(space);
 		  }
 		  for (var i = 0; i < 10-(localStorage.getItem("count")%10);i++){
 			  var space = document.createElement("DIV");
-			  if (i==0){
-					 space.className+="col-xs-2 col-xs-offset-1";
+			  if (i%2==0){
+					 space.className+="col-xs-3 col-xs-offset-3";
 				  
 				 }else{
-					 space.className+="col-xs-2";
+					 space.className+="col-xs-3";
 				 }
 			  var star = document.createElement("IMG");
-			  star.width="60";
+			 star.style.width="100%";
 			  star.src="img/starE.png";
 			  space.appendChild(star);
 			  c.appendChild(space);
