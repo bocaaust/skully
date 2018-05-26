@@ -56,7 +56,7 @@
 		  </div>
 		  </div>
 		  </a>
-		  <div id="card" class="text-center"></div>
+		  <div id="card" class="text-center col-xs-6 col-xs-offset-3"></div>
 		  <div class="row text-center">
 		  <div class="col-xs-12">
 		  
@@ -68,6 +68,10 @@
 		  <div class="col-xs-8 text-center col-xs-offset-2">
 			  
 		  <button class="btn btn-lg" style="width: 100%;margin-top: 18px;" id="checkin" >Check In</button>
+			  </div>
+			   <div class="col-xs-8 text-center col-xs-offset-2" id="redemption">
+			  
+		 
 			  </div>
 		  </div>
 		  
@@ -245,12 +249,7 @@
 		  if (localStorage.getItem("count")>=10 ){
 			 for (var i = 0; i < 10;i++){
 			  var space = document.createElement("DIV");
-			   if (i%2==0){
-					 space.className+="col-xs-3 col-xs-offset-3";
-				  
-				 }else{
-					 space.className+="col-xs-3";
-				 }
+			    space.className+="col-xs-6";
 				// space.style.width="80";
 			  var star = document.createElement("IMG");
 			 star.style.width="100%";
@@ -272,7 +271,7 @@
 			  //	b.href="#rewards";
 			  //b.dataset.toggle="tab";
 			b.style.marginTop="18";
-				 c.appendChild(b);
+				 document.getElementById("redemption").appendChild(b);
 			  document.getElementById("redeem").addEventListener("click", function() {redeam();});
 			   
 			  
@@ -288,12 +287,7 @@
 		  
 		  for (var i = 0; i < localStorage.getItem("count")%10;i++){
 			  var space = document.createElement("DIV");
-			    if (i%2==0){
-					 space.className+="col-xs-3 col-xs-offset-3";
-				  
-				 }else{
-					 space.className+="col-xs-3";
-				 }
+			     space.className+="col-xs-6";
 			//space.style.width="80";
 			  var star = document.createElement("IMG");
 			  star.style.width="100%";
@@ -303,12 +297,7 @@
 		  }
 		  for (var i = 0; i < 10-(localStorage.getItem("count")%10);i++){
 			  var space = document.createElement("DIV");
-			  if (i%2==0){
-					 space.className+="col-xs-3 col-xs-offset-3";
-				  
-				 }else{
-					 space.className+="col-xs-3";
-				 }
+			  space.className+="col-xs-6";
 			  var star = document.createElement("IMG");
 			 star.style.width="100%";
 			  star.src="img/starE.png";
