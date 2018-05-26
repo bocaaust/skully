@@ -180,7 +180,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 	<script src="js/jquery-1.11.3.min.js"></script>
 	    <!-- Calendly inline widget begin -->
-<div class="calendly-inline-widget" data-url="https://calendly.com/skullysbarbersalon/30min" style="min-width:320px;height:580px;"></div>
+<div class="calendly-inline-widget" data-url="https://calendly.com/skullysbarbersalon" style="min-width:320px;height:580px;"></div>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
 <!-- Calendly inline widget end -->
   <script type="text/javascript">
@@ -318,7 +318,7 @@
 		   cordova.plugins.barcodeScanner.scan(
       function (result) {
 		  var d = new Date();
-		  var current = (d.getMonth()+1)*1000000+d.getDate()*10000+d.getFullYear()+123456789
+		  var current = (d.getMonth()+1)*1000000+d.getDate()*10000+d.getFullYear()+123456789;
 		  if (result.text == current){
 			   var data=[];
 			 
