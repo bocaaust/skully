@@ -56,7 +56,7 @@
 		  </div>
 		  </div>
 		  </a>
-		  <div id="card" class="text-center"></div>
+		  <div id="card" class="text-center col-xs-6 col-xs-offset-3"></div>
 		  <div class="row text-center">
 		  <div class="col-xs-12">
 		  
@@ -245,12 +245,7 @@
 		  if (localStorage.getItem("count")>=10 ){
 			 for (var i = 0; i < 10;i++){
 			  var space = document.createElement("DIV");
-			   if (i%2==0){
-					 space.className+="col-xs-3 col-xs-offset-3";
-				  
-				 }else{
-					 space.className+="col-xs-3";
-				 }
+			    space.className+="col-xs-6";
 				// space.style.width="80";
 			  var star = document.createElement("IMG");
 			 star.style.width="100%";
@@ -288,12 +283,7 @@
 		  
 		  for (var i = 0; i < localStorage.getItem("count")%10;i++){
 			  var space = document.createElement("DIV");
-			    if (i%2==0){
-					 space.className+="col-xs-3 col-xs-offset-3";
-				  
-				 }else{
-					 space.className+="col-xs-3";
-				 }
+			     space.className+="col-xs-6";
 			//space.style.width="80";
 			  var star = document.createElement("IMG");
 			  star.style.width="100%";
@@ -303,12 +293,7 @@
 		  }
 		  for (var i = 0; i < 10-(localStorage.getItem("count")%10);i++){
 			  var space = document.createElement("DIV");
-			  if (i%2==0){
-					 space.className+="col-xs-3 col-xs-offset-3";
-				  
-				 }else{
-					 space.className+="col-xs-3";
-				 }
+			  space.className+="col-xs-6";
 			  var star = document.createElement("IMG");
 			 star.style.width="100%";
 			  star.src="img/starE.png";
