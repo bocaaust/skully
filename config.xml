@@ -34,11 +34,7 @@
     <plugin name="cordova-plugin-screen-orientation" source="npm" />
      <plugin name="cordova-plugin-device-motion" source="npm" spec="~1.2.0" />
     <platform name="android">
-       <config-file target="AndroidManifest.xml" parent="/*" mode="merge">
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-feature android:name="android.hardware.camera.autofocus" />
-</config-file>
+       
         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />
         <icon density="hdpi" src="www/res/icon/android/drawable-hdpi-icon.png" />
