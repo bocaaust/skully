@@ -19,6 +19,23 @@
 	border-style: solid;
 }
 
+.socialIcon {
+	height: 6vh;
+	margin: 1vh;
+}
+
+.socialBar {
+	z-index: 1;
+	position: fixed;
+	bottom: 0;
+	left: 3vw;
+	height: 8vh;
+	text-align: center;
+	background-color: black;
+	box-shadow: 4px 0px 2px 2px black;
+	width: 103vw;
+}
+
 .skull {
 	background-image: url(../img/barSkull@2x.png);
 }
