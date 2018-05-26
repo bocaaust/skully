@@ -58,14 +58,15 @@
 		  <div id="card" class="text-center"></div>
 		  <div class="row text-center">
 		  <div class="col-xs-12">
-		  <h4>Check In at 10 haircuts to unlock 1 free haircut</h4>
+		  
+		  <h4 id="header">Check In at 10 haircuts to unlock 1 free haircut</h4>
 			  </div>
 		  </div>
 		  <div class="row">
 		  
 		  <div class="col-xs-8 text-center col-xs-offset-2">
 			  
-		  <button onclick="scanBarcode()" class="btn btn-lg" style="width: 100%;margin-top: 18px;">Check In</button>
+		  <button onclick="(function() {scanBarcode();})();" class="btn btn-lg" style="width: 100%;margin-top: 18px;" type="button">Check In</button>
 			  </div>
 		  </div>
 		  </a>
@@ -190,6 +191,10 @@
 		  fillCard();
 	  }
 	  
+	  if (localStorage.phrase){
+		  document.getElementById("header").innerHTML=localStorage.phrase;
+	  }
+	  
 	  function remove(){
 		  var c = document.getElementById("card");
 		  while (c.hasChildNodes()) {
@@ -226,8 +231,10 @@
 		  c=document.getElementById("card");
 		  var title = document.createElement("H2");
 		  var d = Date();
-		  title.innerHTML="You have unlocked one free haircut for use on "+d.toDateString();
+		  title.innerHTML="You have unlocked one free haircut for use on "+d.toDateString;
+		  localStorage.setItem("phrase","You have unlocked one free haircut for use on "+d.toDateString);
 		  c.appendChild("title");
+		 
 	  }
 	  
 	  function fillCard(){
@@ -248,13 +255,32 @@
 			  star.src="img/star.png";
 			  space.appendChild(star);
 			  c.appendChild(space);
-				 var b = document.createElement("BUTTON");
-				 b.onclick="redeam()";
+				
+			 }
+			   var b = document.createElement("DIV");
+				 b.id="redeem";
+			  		
 				 b.innerHTML="You have unlocked a free haircut, tap here to redeem";
-				 b.className+="btn btn-success";	
-				  b.style.marginTop="18";
+				 //b.className+="btn btn-success";	
+			  b.style.color="#fff";
+			  b.style.backgroundColor="#5cb85c";
+			  b.style.borderColor="#4cae4c";
+			  b.style.padding="6px 12px";
+			   b.style.marginTop="18";
+			  //	b.href="#rewards";
+			  //b.dataset.toggle="tab";
+			
 				 c.appendChild(b);
-			 } 
+			  document.getElementById("redeem").addEventListener("click",redeam());
+			  
+
+
+
+
+
+
+
+				 
 		  }else{
 		  
 		  for (var i = 0; i < localStorage.getItem("count")%10;i++){
@@ -311,15 +337,13 @@
 			  remove();
 			  fillCard();
 		  }
-          alert("We got a barcode\n" +
-                "Result: " + result.text + "\n" +
-                "Format: " + result.format + "\n" +
-                "Cancelled: " + result.cancelled);
+         
       },
       function (error) {
           alert("Scanning failed: " + error);
       }
    );
+		
 	  }
 			</script>
 	  </div>
