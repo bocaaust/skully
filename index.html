@@ -233,7 +233,7 @@
 		  var d = new Date();
 		  title.innerHTML="You have unlocked one free haircut for use on "+(d.getMonth()+1)+"/"+d.getDate()+"/"+d.getFullYear();
 		  localStorage.setItem("phrase","You have unlocked one free haircut for use on "+(d.getMonth()+1)+"/"+d.getDate()+"/"+d.getFullYear());
-		  c.appendChild("title");
+		  c.appendChild(title);
 		 
 	  }
 	  
@@ -266,10 +266,10 @@
 			  b.style.backgroundColor="#5cb85c";
 			  b.style.borderColor="#4cae4c";
 			  b.style.padding="6px 12px";
-			   b.style.marginTop="18";*/
+			   */
 			  //	b.href="#rewards";
 			  //b.dataset.toggle="tab";
-			
+			b.style.marginTop="18";
 				 c.appendChild(b);
 			  document.getElementById("redeem").addEventListener("click", function() {redeam();});
 			  
