@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.austinlubetkin.skullythebarber" version="1.1.8" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.austinlubetkin.skullythebarber" version="1.1.9" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Skully's Barber Salon</name>
     <description>
         Skully's Barber Salon is Florida's only mobile barber salon. Founded in 2015 and opened in 2016, Skully's is your one stop for on the go mobile haircuts, color and styling.
@@ -10,7 +10,6 @@
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="26" />
-    
     <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
     
     <plugin name="cordova-plugin-console" source="npm" spec="~1.0.2" />
@@ -124,6 +123,7 @@
         <icon height="360" platform="windows" src="www/res/icon/windows/Wide310x150Logo.scale-240.png" width="744" />
         <splash height="1920" platform="windows" src="www/res/screen/windows/SplashScreenPhone.scale-240.png" width="1152" />
     </platform>
+  
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
