@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.austinlubetkin.skullythebarber" version="1.1.5" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.austinlubetkin.skullythebarber" version="1.1.6" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Skully's Barber Salon</name>
     <description>
         Skully's Barber Salon is Florida's only mobile barber salon. Founded in 2015 and opened in 2016, Skully's is your one stop for on the go mobile haircuts, color and styling.
@@ -18,7 +18,10 @@
     <plugin name="cordova-plugin-console" source="npm" spec="~1.0.2" />
     
     <plugin name="cordova-plugin-device" source="npm" spec="~1.1.1" />
-   <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1" />
+   <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1" >
+   <param name="CAMERA_USAGE_DESCRIPTION" value="We are using the Camera for checking in through our Rewards Program" />
+   <param name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="We are using the Camera for checking in through our Rewards Program" />
+	</plugin>
    <plugin name="cordova-plugin-barcodescanner" source="npm" spec="~0.7.4" />
     <plugin name="cordova-plugin-media-capture" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-device-orientation" source="npm" spec="~1.0.2" />
