@@ -9,6 +9,15 @@
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/skully.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<style>
+		.btn {
+			    border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+    border-style: solid;
+    border-width: 1px;
+    padding: 1px 7px 2px;
+			background-color: gray;
+		}
+	  </style>
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -16,7 +25,7 @@
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
   </head>
-  <body>
+  <body onLoad="init()">
 
    
 
@@ -177,7 +186,7 @@
 		  </div>
 		  </div>
 		  </a>
-		  <a class="twitter-timeline" href="https://twitter.com/SkullysBarber?ref_src=twsrc%5Etfw">Tweets by SkullysBarber</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		  <a class="twitter-timeline" href="https://twitter.com/SkullysBarber?ref_src=twsrc%5Etfw">Tweets by SkullysBarber</a> <script async src="js/twitter.js" charset="utf-8"></script>
 		<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/BgpIKXIHZCW/" data-instgrm-version="8" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BgpIKXIHZCW/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Skullys Barber Salon (@skullysbarbersalon)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2018-03-22T22:41:02+00:00">Mar 22, 2018 at 3:41pm PDT</time></p></div></blockquote> <script async defer src="//www.instagram.com/embed.js"></script>
 	  <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/Bfy8UzEnPyb/" data-instgrm-version="8" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/Bfy8UzEnPyb/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">🇮🇪 Come see us for a cut! Don&#39;t forget to take a pic in front of our shop for a discount. #irish #pride #barber #barbershop #hair #hairstyles</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by <a href="https://www.instagram.com/skullysbarbersalon/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> Skullys Barber Salon</a> (@skullysbarbersalon) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2018-03-01T21:38:37+00:00">Mar 1, 2018 at 1:38pm PST</time></p></div></blockquote> <script async defer src="//www.instagram.com/embed.js"></script>
 	  <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/BfodCkvnReS/" data-instgrm-version="8" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BfodCkvnReS/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Skullys Barber Salon (@skullysbarbersalon)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2018-02-25T19:52:51+00:00">Feb 25, 2018 at 11:52am PST</time></p></div></blockquote> <script async defer src="//www.instagram.com/embed.js"></script>
@@ -197,175 +206,24 @@
 		  </div>
 		  </div>
 			</a>
+			
+			<script src="js/index.js" ></script>
 	      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 	<script src="js/jquery-1.11.3.min.js"></script>
 	    <!-- Calendly inline widget begin -->
 <div class="calendly-inline-widget" data-url="https://calendly.com/skullysbarbersalon" style="min-width:320px;height:580px;"></div>
 	  </div>
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+<script type="text/javascript" src="js/calendly.js"></script>
 <!-- Calendly inline widget end -->
 	  </div>
-  <script type="text/javascript">
-	  document.getElementById("checkin").addEventListener("click",function() {scanBarcode();});
-	  if (localStorage.count){
-		  fillCard();
-	  }else{
-		  localStorage.count=0;
-		  fillCard();
-	  }
 	  
-	  if (localStorage.phrase){
-		  document.getElementById("header").innerHTML=localStorage.phrase;
-	  }
-	  
-	  function remove(){
-		  var c = document.getElementById("card");
-		  while (c.hasChildNodes()) {
-    		c.removeChild(c.lastChild);
-		  	}
-	  }
-	  
-	  function fillBlank(){
-		
-		  var c = document.getElementById("card");
-		 
-			 for (var i = 0; i < 10;i++){
-				 
-			  var space = document.createElement("DIV");
-				 if (i==0){
-					  space.className+="col-xs-6";
-				 }else{
-					 space.className+="col-xs-6";
-				 }
-			  
-				//space.style.width="80";
-			  var star = document.createElement("IMG");
-			  star.style.width="100%";
-			  star.src="img/starE.png";
-			  space.appendChild(star);
-			  c.appendChild(space);
-	  }
-	  }
-	  
-	  function redeam(){
-		  localStorage.setItem("count",localStorage.getItem("count")-10);
-		  
-		  remove();
-		   var r = document.getElementById("redemption");
-		  while (r.hasChildNodes()) {
-    		r.removeChild(r.lastChild);
-		  	}
-		  fillCard();
-		  c=document.getElementById("card");
-		  var title = document.createElement("H2");
-		  var d = new Date();
-		  title.innerHTML="You have unlocked one free haircut for use on "+(d.getMonth()+1)+"/"+d.getDate()+"/"+d.getFullYear();
-		  localStorage.setItem("phrase","You have unlocked one free haircut for use on "+(d.getMonth()+1)+"/"+d.getDate()+"/"+d.getFullYear());
-		  c.appendChild(title);
-		 
-	  }
-	  
-	  function fillCard(){
-		 // remove();
-		  var c = document.getElementById("card");
-		  if (localStorage.getItem("count")>=10 ){
-			 for (var i = 0; i < 10;i++){
-			  var space = document.createElement("DIV");
-			    space.className+="col-xs-6";
-				// space.style.width="80";
-			  var star = document.createElement("IMG");
-			 star.style.width="100%";
-			  star.src="img/star.png";
-			  space.appendChild(star);
-			  c.appendChild(space);
-				
-			 }
-			   var b = document.createElement("DIV");
-				 b.id="redeem";
-			  		
-				 b.innerHTML="You have unlocked a free haircut, tap here to redeem";
-				 b.className+="btn btn-success";	
-			  /*b.style.color="#fff";
-			  b.style.backgroundColor="#5cb85c";
-			  b.style.borderColor="#4cae4c";
-			  b.style.padding="6px 12px";
-			   */
-			  //	b.href="#rewards";
-			  //b.dataset.toggle="tab";
-			b.style.marginTop="18";
-				 document.getElementById("redemption").appendChild(b);
-			  document.getElementById("redeem").addEventListener("click", function() {redeam();});
-			   
-			  
-
-
-
-
-
-
-
-				 
-		  }else{
-		  
-		  for (var i = 0; i < localStorage.getItem("count")%10;i++){
-			  var space = document.createElement("DIV");
-			     space.className+="col-xs-6";
-			//space.style.width="80";
-			  var star = document.createElement("IMG");
-			  star.style.width="100%";
-			  star.src="img/star.png";
-			  space.appendChild(star);
-			  c.appendChild(space);
-		  }
-		  for (var i = 0; i < 10-(localStorage.getItem("count")%10);i++){
-			  var space = document.createElement("DIV");
-			  space.className+="col-xs-6";
-			  var star = document.createElement("IMG");
-			 star.style.width="100%";
-			  star.src="img/starE.png";
-			  space.appendChild(star);
-			  c.appendChild(space);
-		  }
-		  }
-	  }
-	  function scanBarcode(){
-		   cordova.plugins.barcodeScanner.scan(
-      function (result) {
-		  var d = new Date();
-		  var current = (d.getMonth()+1)*1000000+d.getDate()*10000+d.getFullYear()+123456789;
-		  if (result.text == current){
-			   var data=[];
-			 
-			  if(localStorage.getItem("dates") == null){
-				 data.push(current);
-				  localStorage.setItem("count",1);
-			  }else{
-				  data = JSON.parse(localStorage.getItem("dates"));
-				  if (data.contains(current) == false){
-					data.push(current);
-					  localStorage.setItem("count",localStorage.getItem("count")+1);
-				  }
-				  
-			  }
-			  localStorage.setItem("dates",JSON.stringify(data));
-			  remove();
-			  fillCard();
-		  }
-         
-      },
-      function (error) {
-          alert("Scanning failed: " + error);
-      }
-   );
-		
-	  }
-			</script>
+	 
 
 	 
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-	<script src="js/jquery-1.11.3.min.js"></script>
+	
 
 	<!-- Include all compiled plugins (below), or include individual files as needed --> 
 	<script src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/skully.js"></script>
   </body>
 </html>
