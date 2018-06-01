@@ -2,9 +2,9 @@
 
 function init(){
 	screen.orientation.lock('portrait').then(function success() {
-console.log(“Successfully locked the orientation”);
+console.log("Successfully locked the orientation");
 },function error(errMsg) {
-console.log(“Error locking the orientation :: “ + errMsg);
+console.log("Error locking the orientation :: " + errMsg);
 });
 	  document.getElementById("checkin").addEventListener("click",function() {scanBarcode();});
 	  if (localStorage.count){

@@ -136,7 +136,7 @@
                     "/manifest": [
                         {
                             "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
-                            "count": 2
+                            "count": 5
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.CAMERA\" />",
