@@ -10,23 +10,13 @@
     "cordova-plugin-battery-status": {
       "PACKAGE_NAME": "com.austinlubetkin.skullythebarber"
     },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.austinlubetkin.skullythebarber"
+    },
     "cordova-plugin-console": {
       "PACKAGE_NAME": "com.austinlubetkin.skullythebarber"
     },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "com.austinlubetkin.skullythebarber"
-    },
-    "cordova-plugin-ios-camera-permissions": {
-      "PACKAGE_NAME": "com.austinlubetkin.skullythebarber"
-    },
-    "cordova-plugin-camera": {
-      "PACKAGE_NAME": "com.austinlubetkin.skullythebarber"
-    },
-    "phonegap-plugin-barcodescanner": {
-      "ANDROID_SUPPORT_V4_VERSION": "27.+",
-      "PACKAGE_NAME": "com.austinlubetkin.skullythebarber"
-    },
-    "cordova-plugin-media-capture": {
       "PACKAGE_NAME": "com.austinlubetkin.skullythebarber"
     },
     "cordova-plugin-dialogs": {
@@ -44,10 +34,19 @@
     "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "com.austinlubetkin.skullythebarber"
     },
+    "cordova-plugin-ios-camera-permissions": {
+      "PACKAGE_NAME": "com.austinlubetkin.skullythebarber"
+    },
     "cordova-plugin-media": {
       "PACKAGE_NAME": "com.austinlubetkin.skullythebarber"
     },
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "com.austinlubetkin.skullythebarber"
+    },
     "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.austinlubetkin.skullythebarber"
+    },
+    "cordova-plugin-screen-orientation": {
       "PACKAGE_NAME": "com.austinlubetkin.skullythebarber"
     },
     "cordova-plugin-splashscreen": {
@@ -62,7 +61,8 @@
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.austinlubetkin.skullythebarber"
     },
-    "cordova-plugin-screen-orientation": {
+    "phonegap-plugin-barcodescanner": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
       "PACKAGE_NAME": "com.austinlubetkin.skullythebarber"
     }
   },
