@@ -8,7 +8,7 @@
         Austin Lubetkin
     </author>
     <content src="index.html" />
-    <preference name="phonegap-version" value="cli-6.5.0" />
+    <preference name="phonegap-version" value="cli-8.0.0" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="26" />
     <plugin name="cordova-plugin-battery-status" source="npm" />
@@ -21,9 +21,6 @@
     <plugin name="cordova-plugin-camera" source="npm">
         <parameter name="CAMERA_USAGE_DESCRIPTION" value="We are using the Camera for checking in through our Rewards Program" />
         <parameter name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="We are using the Camera for checking in through our Rewards Program" />
-    </plugin>
-    <plugin name="phonegap-plugin-barcodescanner">
-        <parameter name="CAMERA_USAGE_DESCRIPTION" value="We are using the Camera for checking in through our Rewards Program" />
     </plugin>
     <plugin name="cordova-plugin-media-capture" source="npm" />
     <plugin name="cordova-plugin-dialogs" source="npm" />
@@ -134,4 +131,6 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <engine name="android" spec="~7.0.0" />
+    <engine name="browser" spec="~5.0.3" />
+    <plugin name="phonegap-plugin-barcodescanner" spec="~8.0.0" />
 </widget>

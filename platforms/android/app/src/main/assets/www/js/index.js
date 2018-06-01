@@ -142,6 +142,7 @@ function init(){
 		  }
 	  }
 	  function scanBarcode(){
+		 
 		   cordova.plugins.barcodeScanner.scan(
       function (result) {
 		  var d = new Date();

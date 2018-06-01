@@ -1,0 +1,36 @@
+{
+  "name": "com.austinlubetkin.skullythebarber",
+  "version": "1.2.7",
+  "displayName": "Skully's Barber Salon",
+  "cordova": {
+    "platforms": [
+      "android",
+      "browser"
+    ],
+    "plugins": {
+      "cordova-plugin-battery-status": {},
+      "cordova-plugin-console": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-ios-camera-permissions": {},
+      "cordova-plugin-camera": {},
+      "phonegap-plugin-barcodescanner": {},
+      "cordova-plugin-media-capture": {},
+      "cordova-plugin-dialogs": {},
+      "cordova-plugin-file": {},
+      "cordova-plugin-file-transfer": {},
+      "cordova-plugin-geolocation": {},
+      "cordova-plugin-globalization": {},
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-media": {},
+      "cordova-plugin-network-information": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-vibration": {},
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-screen-orientation": {}
+    }
+  },
+  "dependencies": {
+    "cordova-android": "~7.0.0"
+  }
+}
