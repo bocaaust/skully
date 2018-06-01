@@ -8,6 +8,7 @@
         Austin Lubetkin
     </author>
     <content src="index.html" />
+    <preference name="phonegap-version" value="cli-6.3.0"/>
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="26" />
     <plugin name="cordova-plugin-battery-status" source="npm"  />
@@ -27,7 +28,7 @@
    <parameter name="CAMERA_USAGE_DESCRIPTION" value="We are using the Camera for checking in through our Rewards Program" />
 	</plugin>
     <plugin name="cordova-plugin-media-capture" source="npm" />
-    <plugin name="cordova-plugin-device-orientation" source="npm"  />
+    
     <plugin name="cordova-plugin-dialogs" source="npm" />
     <plugin name="cordova-plugin-file" source="npm" />
     <plugin name="cordova-plugin-file-transfer" source="npm"  />
@@ -41,7 +42,7 @@
     <plugin name="cordova-plugin-vibration" source="npm"  />
     <plugin name="cordova-plugin-whitelist" source="npm"  />
     <plugin name="cordova-plugin-screen-orientation" source="npm" />
-     <plugin name="cordova-plugin-device-motion" source="npm"  />
+     
     <platform name="android">
        
         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
