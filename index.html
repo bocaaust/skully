@@ -8,6 +8,7 @@
     <title>Skully's Barber Salon</title>
     <!-- Bootstrap -->
 	  <script type="text/javascript" src="js/skully.js"></script>
+	   
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/skully.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
@@ -78,7 +79,7 @@
 	  <div class="row">
 	  <div class="col-xs-12 navBar navCheck">
 	  <div class="col-xs-2">
-		  <img src="img/Hamburger_icon.svg.png" style="width: 6vh;margin: 2.1vh;margin-left:0px;" />
+		  <img  class="lazy" data-src="img/back_icon.png" style="width: 6vh;margin: 2.1vh;margin-left:0px;" />
 		  </div>
 		  <div class="col-xs-8">
 		  <h1 class="navTitle">Skully Rewards</h1>
@@ -112,7 +113,7 @@
 	  <div class="row">
 	  <div class="col-xs-12 navBar navTruck">
 	  <div class="col-xs-2">
-		 <img src="img/Hamburger_icon.svg.png" style="width: 6vh;margin: 2.1vh;margin-left:0px;" />
+		 <img class="lazy" data-src="img/back_icon.png" style="width: 6vh;margin: 2.1vh;margin-left:0px;" />
 		  </div>
 		  <div class="col-xs-9">
 		  <h1 class="navTitle">More Information</h1>
@@ -120,7 +121,7 @@
 		  </div>
 		  </div>
 		  </a>
-		  <img src="img/skullyHero@2x.png" width="100%" style="margin-bottom: 0px;"/>
+		  <img class="lazy" data-src="img/skullyHero@2x.png" width="100%" style="margin-bottom: 0px;"/>
 		  <div class="text-right" style="margin-top: -32px;">
 			  <h3 style="font-size: 8vw; margin-right: 3vw;">863-224-3507</h3>
 		  </div>
@@ -196,7 +197,7 @@
 	  <div class="row">
 	  <div class="col-xs-12 navBar navCut">
 	  <div class="col-xs-2">
-		 <img src="img/Hamburger_icon.svg.png" style="width: 6vh;margin: 2.1vh;margin-left:0px;" />
+		 <img class="lazy" data-src="img/back_icon.png" style="width: 6vh;margin: 2.1vh;margin-left:0px;" />
 		  </div>
 		  <div class="col-xs-8">
 		  <h1 class="navTitle">Media</h1>
@@ -211,7 +212,7 @@
 	    <div class="row">
 	  <div class="col-xs-12 navBar skull">
 	  <div class="col-xs-1">
-		 <img src="img/Hamburger_icon.svg.png" style="width: 6vh;margin: 2.1vh;margin-left:0px;" />
+		 <img class="lazy" data-src="img/back_icon.png" style="width: 6vh;margin: 2.1vh;margin-left:0px;" />
 		  </div>
 		  <div class="col-xs-11">
 		  <h1 class="navTitle">Book an Appointment</h1>
@@ -233,7 +234,8 @@
 	      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 	<script src="js/jquery-1.11.3.min.js"></script>
 
-	 
+	 <script type="text/javascript" src="js/jquery.lazy.min.js"></script>
+	  <script type="text/javascript" src="js/jquery.lazy.iframe.js"></script>
 	
 
 	<!-- Include all compiled plugins (below), or include individual files as needed --> 

@@ -18,6 +18,9 @@
  */
 
 function init(){
+	 $(function() {
+        $('.lazy').Lazy();
+    });
 		screen.orientation.lock('portrait').then(function success() {
 console.log("Successfully locked the orientation");
 },function error(errMsg) {
