@@ -17,16 +17,84 @@
  * under the License.
  */
 
-function init(){
-	 $(function() {
-        $('.lazy').Lazy();
-    });
-		screen.orientation.lock('portrait').then(function success() {
+
+
+var app = {
+    // Application Constructor
+    initialize: function() {
+        this.bindEvents();
+    },
+    // Bind Event Listeners
+    //
+    // Bind any events that are required on startup. Common events are:
+    // 'load', 'deviceready', 'offline', and 'online'.
+    bindEvents: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    // deviceready Event Handler
+    //
+    // The scope of 'this' is the event. In order to call the 'receivedEvent'
+    // function, we must explicitly call 'app.receivedEvent(...);'
+    onDeviceReady: function() {
+      screen.orientation.lock('portrait').then(function success() {
 console.log("Successfully locked the orientation");
 },function error(errMsg) {
 console.log("Error locking the orientation :: " + errMsg);
 });
-	  document.getElementById("checkin").addEventListener("click",function() {scanBarcode();});
+	//document.getElementById("checkin").addEventListener("click",this.scanBarcode);
+    },
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
+        
+    },
+	
+	/*scanBarcode: function() {
+		   cordova.plugins.barcodeScanner.scan(
+      function (result) {
+		  var d = new Date();
+		  var current = (d.getMonth()+1)*1000000+d.getDate()*10000+d.getFullYear()+123456789;
+		  if (result.text == current){
+			   var data=[];
+			 
+			  if(localStorage.getItem("dates") == null){
+				 data.push(current);
+				  localStorage.setItem("count",1);
+			  }else{
+				  data = JSON.parse(localStorage.getItem("dates"));
+				  if (data.contains(current) == false){
+					data.push(current);
+					  localStorage.setItem("count",localStorage.getItem("count")+1);
+				  }
+				  
+			  }
+			  localStorage.setItem("dates",JSON.stringify(data));
+			  remove();
+			  fillCard();
+		  }
+         
+      },
+      function (error) {
+          alert("Scanning failed: " + error);
+      }
+   );
+		
+	  }*/
+};
+/*
+function init(){
+	 $(function() {
+        $('.lazy').Lazy();
+    });
+	
+	 app.initialize(); 
+	
+	  
+	  }
+
+	function loadRewards(){
+		remove();
+		//$("checkin").off();
+		
 	  if (localStorage.count){
 		  fillCard();
 	  }else{
@@ -37,7 +105,7 @@ console.log("Error locking the orientation :: " + errMsg);
 	  if (localStorage.phrase){
 		  document.getElementById("header").innerHTML=localStorage.phrase;
 	  }
-	  }
+	}
 	  
 	  function remove(){
 		  var c = document.getElementById("card");
@@ -110,7 +178,7 @@ console.log("Error locking the orientation :: " + errMsg);
 			  b.style.backgroundColor="#5cb85c";
 			  b.style.borderColor="#4cae4c";
 			  b.style.padding="6px 12px";
-			   */
+			   
 			  //	b.href="#rewards";
 			  //b.dataset.toggle="tab";
 			b.style.marginTop="18";
@@ -149,78 +217,4 @@ console.log("Error locking the orientation :: " + errMsg);
 		  }
 		  }
 	  }
-	  function scanBarcode(){
-		 
-		   cordova.plugins.barcodeScanner.scan(
-      function (result) {
-		  var d = new Date();
-		  var current = (d.getMonth()+1)*1000000+d.getDate()*10000+d.getFullYear()+123456789;
-		  if (result.text == current){
-			   var data=[];
-			 
-			  if(localStorage.getItem("dates") == null){
-				 data.push(current);
-				  localStorage.setItem("count",1);
-			  }else{
-				  data = JSON.parse(localStorage.getItem("dates"));
-				  if (data.contains(current) == false){
-					data.push(current);
-					  localStorage.setItem("count",localStorage.getItem("count")+1);
-				  }
-				  
-			  }
-			  localStorage.setItem("dates",JSON.stringify(data));
-			  remove();
-			  fillCard();
-		  }
-         
-      },
-      function (error) {
-          alert("Scanning failed: " + error);
-      },
-      {
-          preferFrontCamera : false, // iOS and Android
-          showFlipCameraButton : true, // iOS and Android
-          showTorchButton : true, // iOS and Android
-          
-          saveHistory: false, // Android, save scan history (default false)
-          prompt : "Place a barcode inside the scan area", // Android
-          resultDisplayDuration: 500, // Android, display scanned text for X ms. 0 suppresses it entirely, default 1500
-          
-          
-          disableSuccessBeep: false // iOS and Android
-      }
-   );
-		
-	  }
-var app = {
-    // Application Constructor
-    initialize: function() {
-        this.bindEvents();
-    },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
-    }
-};
+	  */

@@ -1,4 +1,5 @@
 // JavaScript Document
+document.addEventListener("deviceready", init, false);
 
 function init(){
 	 $(function() {
@@ -9,7 +10,14 @@ console.log("Successfully locked the orientation");
 },function error(errMsg) {
 console.log("Error locking the orientation :: " + errMsg);
 });
-	  document.getElementById("checkin").addEventListener("click",function() {scanBarcode();});
+	document.querySelector("#checkin").addEventListener("touchend",scanBarcode, false)
+	  
+	  }
+
+	function loadRewards(){
+		remove();
+		//$("checkin").off();
+		
 	  if (localStorage.count){
 		  fillCard();
 	  }else{
@@ -20,7 +28,7 @@ console.log("Error locking the orientation :: " + errMsg);
 	  if (localStorage.phrase){
 		  document.getElementById("header").innerHTML=localStorage.phrase;
 	  }
-	  }
+	}
 	  
 	  function remove(){
 		  var c = document.getElementById("card");
