@@ -144,20 +144,20 @@ console.log("Error locking the orientation :: " + errMsg);
 		  var d = new Date();
 		  var current = (d.getMonth()+1)*1000000+d.getDate()*10000+d.getFullYear()+123456789;
 		  if (result.text === current){
-			   var data=[];
+			   var data;
 			 
 			  if(localStorage.getItem("dates") === null){
-				 data.push(current);
+				 data = current;
 				  localStorage.setItem("count",1);
 			  }else{
-				  data = JSON.parse(localStorage.getItem("dates"));
-				  if (data.contains(current) === false){
-					data.push(current);
+				 
+				  if (localStorage.dates !== current ){
+					
 					  localStorage.setItem("count",localStorage.getItem("count")+1);
 				  }
 				  
 			  }
-			  localStorage.setItem("dates",JSON.stringify(data));
+			  localStorage.setItem("dates",data);
 			  remove();
 			  fillCard();
 		  }
