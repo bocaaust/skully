@@ -2,15 +2,12 @@
 document.addEventListener("deviceready", init, false);
 
 function init(){
-	 $(function() {
-        $('.lazy').Lazy();
-    });
 	screen.orientation.lock('portrait').then(function success() {
 console.log("Successfully locked the orientation");
 },function error(errMsg) {
 console.log("Error locking the orientation :: " + errMsg);
 });
-	document.querySelector("#checkin").addEventListener("touchend",scanBarcode, false)
+	document.querySelector("#checkin").addEventListener("touchend",scanBarcode, false);
 	  
 	  }
 
@@ -63,6 +60,7 @@ console.log("Error locking the orientation :: " + errMsg);
 		  localStorage.setItem("count",localStorage.getItem("count")-10);
 		  
 		  remove();
+		    var c = document.getElementById("card");
 		   var r = document.getElementById("redemption");
 		  while (r.hasChildNodes()) {
     		r.removeChild(r.lastChild);
@@ -106,7 +104,7 @@ console.log("Error locking the orientation :: " + errMsg);
 			  //b.dataset.toggle="tab";
 			b.style.marginTop="18";
 				 document.getElementById("redemption").appendChild(b);
-			  document.getElementById("redeem").addEventListener("click", function() {redeam();});
+			  document.getElementById("redeem").addEventListener("touchend", function() {redeam();});
 			   
 			  
 
@@ -119,24 +117,24 @@ console.log("Error locking the orientation :: " + errMsg);
 				 
 		  }else{
 		  
-		  for (var i = 0; i < localStorage.getItem("count")%10;i++){
-			  var space = document.createElement("DIV");
-			     space.className+="col-xs-6";
+		  for (var j = 0; j < localStorage.getItem("count")%10;j++){
+			  var space2 = document.createElement("DIV");
+			     space2.className+="col-xs-6";
 			//space.style.width="80";
-			  var star = document.createElement("IMG");
-			  star.style.width="100%";
-			  star.src="img/star.png";
-			  space.appendChild(star);
-			  c.appendChild(space);
+			  var star2 = document.createElement("IMG");
+			  star2.style.width="100%";
+			  star2.src="img/star.png";
+			  space2.appendChild(star2);
+			  c.appendChild(space2);
 		  }
-		  for (var i = 0; i < 10-(localStorage.getItem("count")%10);i++){
-			  var space = document.createElement("DIV");
-			  space.className+="col-xs-6";
-			  var star = document.createElement("IMG");
-			 star.style.width="100%";
-			  star.src="img/starE.png";
-			  space.appendChild(star);
-			  c.appendChild(space);
+		  for (var k = 0; k < 10-(localStorage.getItem("count")%10);k++){
+			  var space3 = document.createElement("DIV");
+			  space3.className+="col-xs-6";
+			  var star3 = document.createElement("IMG");
+			 star3.style.width="100%";
+			  star3.src="img/starE.png";
+			  space3.appendChild(star3);
+			  c.appendChild(space3);
 		  }
 		  }
 	  }
@@ -145,15 +143,15 @@ console.log("Error locking the orientation :: " + errMsg);
       function (result) {
 		  var d = new Date();
 		  var current = (d.getMonth()+1)*1000000+d.getDate()*10000+d.getFullYear()+123456789;
-		  if (result.text == current){
+		  if (result.text === current){
 			   var data=[];
 			 
-			  if(localStorage.getItem("dates") == null){
+			  if(localStorage.getItem("dates") === null){
 				 data.push(current);
 				  localStorage.setItem("count",1);
 			  }else{
 				  data = JSON.parse(localStorage.getItem("dates"));
-				  if (data.contains(current) == false){
+				  if (data.contains(current) === false){
 					data.push(current);
 					  localStorage.setItem("count",localStorage.getItem("count")+1);
 				  }
